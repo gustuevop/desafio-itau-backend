@@ -16,11 +16,11 @@ public class TransacaoRequest {
 	@PastOrPresent
 	private OffsetDateTime dataHora;
 	
-	public double getValor() {
+	public Double getValor() {
 		return valor;
 	}
 
-	public void setValor(double valor) {
+	public void setValor(Double valor) {
 		this.valor = valor;
 	}
 
@@ -33,7 +33,7 @@ public class TransacaoRequest {
 	}
 	
 	public Transacao toTransacao() {
-	    return new Transacao(valor, dataHora);
+	    return new Transacao(valor.doubleValue(), dataHora);
 	}
 
 }
